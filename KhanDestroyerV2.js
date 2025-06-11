@@ -243,7 +243,7 @@ class UI {
                     </label>
                 </div>
                 <div class="khandestroyer-opt" id="speedControlContainer" style="display: none;">
-                    <span>Velocidade (250ms - 1000ms)</span>
+                    <span>Velocidade</span>
                     <div style="width: 100%; display: flex; align-items: center; padding-left: 10px; box-sizing: border-box;">
                         <div class="speed-slider-container">
                             <input type="range" min="0" max="3" value="0" class="speed-slider" id="speedSlider">
