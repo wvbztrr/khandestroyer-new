@@ -1,5 +1,5 @@
 const APP = {
-  ver: "2.0.0",
+  ver: "1.7.0",
   user: {
     id: 0
   },
@@ -61,7 +61,7 @@ class UI {
       top: "10px",
       right: "15px",
       width: "200px",
-      background: "linear-gradient(145deg, #1a1a1a, #111)",
+      background: "linear-gradient(145deg,rgb(15, 15, 15), #111)",
       borderRadius: "12px",
       display: "flex",
       flexDirection: "column",
@@ -218,7 +218,7 @@ class UI {
                 }
             </style>
             <div class="khandestroyer-header">
-                Banzai <span class="khandestroyer-version">${APP.ver}</span>
+                BanzaiDestroyer <span class="khandestroyer-version">${APP.ver}</span>
             </div>
             <div class="khandestroyer-content">
                 <div class="khandestroyer-opt">
@@ -251,7 +251,7 @@ class UI {
                         </div>
                     </div>
                 </div>
-                <div class="khandestroyer-credit">by wbztrr</div>
+                <div class="khandestroyer-credit">by @wbztrr</div>
             </div>
         `;
     document.body.appendChild(_0x3d849d);
@@ -363,7 +363,7 @@ class Core {
       
       // Verificar se Toastify foi carregado antes de usar
       if (typeof Toastify !== 'undefined') {
-        sendToast("🌿 Script carregado!");
+        sendToast("🧟‍♂️ Script carregado!");
       } else {
         console.error("Toastify não foi carregado corretamente");
       }
@@ -376,7 +376,8 @@ class Core {
   
   static setupMod() {
     const messages = [
-      "remade by [@wbztrr](https://instagram.com/wbztrr)"
+      "remade by [@wbztrr](https://instagram.com/wbztrr)",
+      "instagram - wbztrr"
     ];
     
     const originalFetch = window.fetch;
