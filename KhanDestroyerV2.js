@@ -8,7 +8,7 @@ const APP = {
     auto: true,
     questionSpoof: true,
     darkMode: false,
-    autoSpeed: 750,
+    autoSpeed: 250,
     speedOptions: [250, 500, 750, 1000]
   }
 };
@@ -229,7 +229,7 @@ class UI {
                     </label>
                 </div>
                 <div class="khandestroyer-opt">
-                    <span>Question Spoof</span>
+                    <span>Spoofer</span>
                     <label class="switch">
                         <input type="checkbox" id="spoofCheck" checked>
                         <span class="slider"></span>
@@ -243,10 +243,10 @@ class UI {
                     </label>
                 </div>
                 <div class="khandestroyer-opt" id="speedControlContainer" style="display: none;">
-                    <span>Velocidade</span>
+                    <span>Speed</span>
                     <div style="width: 100%; display: flex; align-items: center; padding-left: 10px; box-sizing: border-box;">
                         <div class="speed-slider-container">
-                            <input type="range" min="0" max="3" value="0" class="speed-slider" id="speedSlider">
+                            <input type="range" min="0" max="4" value="0" class="speed-slider" id="speedSlider">
                             <div class="speed-value" id="speedValue" style="display: none;">250ms</div>
                         </div>
                     </div>
@@ -283,7 +283,7 @@ class UI {
     document.getElementById("autoCheck").onchange = event => {
       APP.cfg.auto = event.target.checked;
       document.getElementById("speedControlContainer").style.display = APP.cfg.auto ? "flex" : "none";
-      sendToast(APP.cfg.auto ? "✅ Auto Complete Enabled" : "❌ Auto Complete Disabled", 2000);
+      sendToast(APP.cfg.auto ? "✅ Auto Complete" : "❌ Auto Complete", 2000);
     };
     
     // Configurar o slider de velocidade
@@ -312,7 +312,7 @@ class UI {
     
     document.getElementById("spoofCheck").onchange = event => {
       APP.cfg.questionSpoof = event.target.checked;
-      sendToast(APP.cfg.questionSpoof ? "✅ Question Spoof Enabled" : "❌ Question Spoof Disabled", 2000);
+      sendToast(APP.cfg.questionSpoof ? "✅ Question Spoof" : "❌ Question Spoof", 2000);
     };
     
     document.getElementById("darkModeCheck").onchange = event => {
@@ -320,10 +320,10 @@ class UI {
       if (typeof DarkReader !== 'undefined') {
         if (APP.cfg.darkMode) {
           DarkReader.enable();
-          sendToast("🌑 Dark Mode Enabled", 2000);
+          sendToast("🌑", 2000);
         } else {
           DarkReader.disable();
-          sendToast("☀️ Dark Mode Disabled", 2000);
+          sendToast("☀️", 2000);
         }
       } else {
         console.error("DarkReader não está disponível");
@@ -363,7 +363,7 @@ class Core {
       
       // Verificar se Toastify foi carregado antes de usar
       if (typeof Toastify !== 'undefined') {
-        sendToast("🌿 Script loaded successfully!");
+        sendToast("🌿 Script carregado!");
       } else {
         console.error("Toastify não foi carregado corretamente");
       }
@@ -376,8 +376,7 @@ class Core {
   
   static setupMod() {
     const messages = [
-      "🔥 Games Destroyer On Top[Discord](https://discord.gg/gamesdest)!",
-      "🤍 Made by [@iUnknownBr](https://guns.lol/iunknownbr)."
+      "remade by [@wbztrr](https://instagram.com/wbztrr)"
     ];
     
     const originalFetch = window.fetch;
@@ -420,7 +419,7 @@ class Core {
             };
             
             _0x3cbec8.data.assessmentItem.item.itemData = JSON.stringify(_0x3ca1c5);
-            sendToast("🔓 Question Bypassed", 1000);
+            sendToast("🔓 BYPASSED", 1000);
             
             const _0x1aa163 = {
               status: _0x238f50.status,
@@ -447,7 +446,7 @@ class Core {
       if (element) {
         element.click();
         if (element.textContent === "Mostrar resumo") {
-          sendToast("🎉 Exercise completed!", 3000);
+          sendToast("🎉 COMPLETO!", 3000);
           playAudio("https://r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/4x5g14gj.wav");
         }
       }
