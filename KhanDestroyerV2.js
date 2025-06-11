@@ -5,10 +5,10 @@ const APP = {
   },
   cfg: {
     mod: true,
-    auto: false,
+    auto: true,
     questionSpoof: true,
-    darkMode: true,
-    autoSpeed: 250,
+    darkMode: false,
+    autoSpeed: 750,
     speedOptions: [250, 500, 750, 1000]
   }
 };
