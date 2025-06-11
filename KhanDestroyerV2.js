@@ -5,11 +5,11 @@ const APP = {
   },
   cfg: {
     mod: true,
-    auto: true,
+    auto: false,
     questionSpoof: true,
-    darkMode: false,
-    autoSpeed: 250,
-    speedOptions: [250, 500, 750, 1000]
+    darkMode: true,
+    autoSpeed: 500,
+    speedOptions: [500, 750, 1000, 1250]
   }
 };
 
@@ -218,7 +218,7 @@ class UI {
                 }
             </style>
             <div class="khandestroyer-header">
-                KhanDestroyer <span class="khandestroyer-version">${APP.ver}</span>
+                Banzai <span class="khandestroyer-version">${APP.ver}</span>
             </div>
             <div class="khandestroyer-content">
                 <div class="khandestroyer-opt">
@@ -251,7 +251,7 @@ class UI {
                         </div>
                     </div>
                 </div>
-                <div class="khandestroyer-credit">by iUnknownBr</div>
+                <div class="khandestroyer-credit">by wbztrr</div>
             </div>
         `;
     document.body.appendChild(_0x3d849d);
